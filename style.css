@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+header {
+    background-image: url('images/chris-harris-drives-7552.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    height: 300px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;               
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    border-bottom: 4px solid gold;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    color: white;
+    margin-top: 10px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+.car-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+    border-radius: 15px;
+    padding: 20px;
+    width: 320px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.car-card:hover {
+    border-color: gold; 
+    transform: translateY(-10px); 
+}
+
+.img-box {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.img-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.car-card:hover .img-box img {
+    transform: scale(1.15);
+}
+
+.btn {
+    display: inline-block;
+    background-color: gold;
+    color: black;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+.btn-back {
+    display: inline-block;
+    color: gold;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+.btn-back:hover {
+    color: white;
+}
+
+.detail-container {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.detail-box {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid #333333;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.detail-img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.text-content {
+    text-align: left;
+    line-height: 1.6;
+}
+
+.text-content h2 {
+    color: gold;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 10px;
+}
+
+.specs-box {
+    background-color: #111111;
+    padding: 25px;
+    margin: 30px 0;
+    border-left: 5px solid gold;
+    border-radius: 0 10px 10px 0;
+}
+
+.specs-box h3 {
+    margin-top: 0;
+    color: gold;
+}
+
+.specs-box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.specs-box li {
+    padding: 10px 0;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.specs-box li:last-child {
+    border-bottom: none;
+}
+
+/* 1. GÖR SÅ ATT DET SCROLLAR MJUKT */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 2. STYLA MENYN I HEADERN */
+.navbar {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: gold;
+}
+
+
+footer {
+    background-color: #000;
+    border-top: 4px solid gold;
+    padding: 60px 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-section {
+    width: 280px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    color: gold;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    color: #bbb;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 0.8em;
+    color: #555;
+}
+
+/* ============================================================
+   MOBILANPASSNING (Gör att sidan ser bra ut på telefoner)
+   ============================================================ */
+
+/* Om skärmen är mindre än 600px bred (typ en mobil) */
+@media (max-width: 600px) {
+    
+    header {
+        height: 250px; /* Gör headern lite lägre på mobilen */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Gör texten lite mindre så den inte delas upp fult */
+    }
+
+    /* Gör att dina bil-kort tar upp nästan hela bredden på mobilen */
+    .car-card {
+        width: 90%; 
+        margin: 10px auto; /* Centrerar korten */
+    }
+    
+    /* Ändrar footern från vågrät till lodrät så texten får plats */
+    .footer-content { 
+        flex-direction: column; 
+        text-align: center;
+        gap: 20px; /* Ger lite mellanrum mellan Om oss/Kontakt/Adress */
+    }
+
+    .footer-section {
+        width: 100%; /* Gör att varje sektion tar upp hela bredden */
+    }
+}

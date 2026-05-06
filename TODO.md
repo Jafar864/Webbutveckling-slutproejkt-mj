@@ -1,0 +1,1 @@
+# Fixa "Läs mer" fel\n\n## Steg:\n\n### 1. Skapa TODO.md (✓ Klar)\n### 2. Uppdatera index.html - Porsche länk\n### 3. Uppdatera index.html - BMW länk\n### 4. Uppdatera index.html - Mercedes länk\n### 5. Testa navigering (öppna index.html i webbläsare och klicka "Läs mer")
